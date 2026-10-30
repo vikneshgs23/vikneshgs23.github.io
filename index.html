@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Viknesh GS | QA Automation / SDET</title>
-<meta name="description" content="Viknesh GS builds test automation frameworks with Java + Selenium and JavaScript + Playwright. Based in Chennai, India.">
+<meta name="description" content="Viknesh GS builds test automation frameworks with Java + Selenium and JavaScript + Playwright. Based in Chennai, India. Available for immediate joining.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9C%85%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -76,7 +76,17 @@
   .hero .wrap { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 3.5rem; align-items: center; }
   .hero h1 { font-size: clamp(2.5rem, 6vw, 4rem); line-height: 1.05; font-weight: 700; margin-bottom: 1.25rem; }
   .hero .role { color: var(--pass); font-weight: 500; margin-bottom: 1rem; font-size: 1.125rem; }
-  .hero .intro { color: var(--hero-muted); font-size: 1.15rem; max-width: 32rem; margin-bottom: 2rem; }
+  .hero .intro { color: var(--hero-muted); font-size: 1.15rem; max-width: 32rem; margin-bottom: 1.25rem; }
+  .availability {
+    display: inline-flex; align-items: center; gap: 0.6rem;
+    border: 1px solid var(--hero-line); border-radius: 999px;
+    padding: 0.3rem 0.9rem; margin-bottom: 1.75rem;
+    color: var(--hero-ink); font-size: 0.95rem;
+  }
+  .availability::before {
+    content: ""; width: 0.55rem; height: 0.55rem; border-radius: 50%;
+    background: var(--pass); flex: none;
+  }
   .actions { display: flex; flex-wrap: wrap; gap: 0.75rem; }
   .btn {
     display: inline-block; padding: 0.7rem 1.25rem; border-radius: 6px;
@@ -131,7 +141,10 @@
   .project ul { margin: 0 0 1.25rem; padding-left: 1.1rem; }
   .project li { margin-bottom: 0.35rem; }
   .project .chips { margin-top: auto; padding-bottom: 1.25rem; }
+  .links { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 1.25rem; }
   .repo { font-weight: 500; color: var(--accent); text-underline-offset: 0.2em; }
+  .ci-badge { display: inline-flex; line-height: 0; }
+  .ci-badge img { height: 20px; width: auto; }
 
   .chips { display: flex; flex-wrap: wrap; gap: 0.5rem; }
   .chip { background: var(--chip); border-radius: 999px; padding: 0.2rem 0.8rem; font-size: 0.875rem; }
@@ -145,7 +158,9 @@
   .contact { background: var(--hero); color: var(--hero-ink); margin-top: 5rem; padding: 4.5rem 0; }
   .contact h2 { font-size: 2rem; font-weight: 700; max-width: 30rem; margin-bottom: 0.75rem; }
   .contact p { color: var(--hero-muted); max-width: 30rem; margin-bottom: 1.75rem; }
+  .contact p a { color: var(--hero-ink); text-underline-offset: 0.2em; }
   footer { background: var(--hero); color: var(--hero-muted); border-top: 1px solid var(--hero-line); padding: 1.25rem 0; font-size: 0.9rem; }
+  footer a { text-underline-offset: 0.2em; }
 
   @media (max-width: 52rem) {
     .hero { padding: 3.5rem 0 4rem; }
@@ -185,8 +200,10 @@
       <p class="role">QA Automation Engineer / SDET</p>
       <h1>I build test automation that catches bugs before users do.</h1>
       <p class="intro">Test frameworks in Java + Selenium and JavaScript + Playwright, run in CI on every push. Based in Chennai, India.</p>
+      <p class="availability">Available for immediate joining</p>
       <div class="actions">
         <a class="btn btn-primary" href="#projects">View projects</a>
+        <a class="btn btn-ghost" href="Viknesh_GS_Resume.pdf" download>Download resume</a>
         <a class="btn btn-ghost" href="https://www.linkedin.com/in/gs-viknesh">LinkedIn</a>
       </div>
     </div>
@@ -217,6 +234,7 @@
         <div class="facts">
           <div class="fact"><strong>Manual testing background</strong><span>UI and end-to-end testing</span></div>
           <div class="fact"><strong>ISTQB CTFL exam passed</strong><span>Foundation Level</span></div>
+          <div class="fact"><strong>Chennai, India</strong><span>Available for immediate joining</span></div>
         </div>
       </div>
     </div>
@@ -241,7 +259,12 @@
           <div class="chips">
             <span class="chip">Java 17</span><span class="chip">Selenium 4</span><span class="chip">TestNG</span><span class="chip">Maven</span>
           </div>
-          <a class="repo" href="https://github.com/vikneshgs23/saucedemo-selenium-testng-framework">View on GitHub</a>
+          <div class="links">
+            <a class="repo" href="https://github.com/vikneshgs23/saucedemo-selenium-testng-framework">View on GitHub</a>
+            <a class="ci-badge" href="https://github.com/vikneshgs23/saucedemo-selenium-testng-framework/actions/workflows/regression.yml" aria-label="Selenium project CI runs on GitHub Actions">
+              <img src="https://github.com/vikneshgs23/saucedemo-selenium-testng-framework/actions/workflows/regression.yml/badge.svg" alt="Selenium project CI status" loading="lazy">
+            </a>
+          </div>
         </article>
 
         <article class="project">
@@ -255,7 +278,12 @@
           <div class="chips">
             <span class="chip">JavaScript</span><span class="chip">Playwright</span><span class="chip">GitHub Actions</span>
           </div>
-          <a class="repo" href="https://github.com/vikneshgs23/playwright-swaglabs-js">View on GitHub</a>
+          <div class="links">
+            <a class="repo" href="https://github.com/vikneshgs23/playwright-swaglabs-js">View on GitHub</a>
+            <a class="ci-badge" href="https://github.com/vikneshgs23/playwright-swaglabs-js/actions/workflows/playwright.yml" aria-label="Playwright project CI runs on GitHub Actions">
+              <img src="https://github.com/vikneshgs23/playwright-swaglabs-js/actions/workflows/playwright.yml/badge.svg" alt="Playwright project CI status" loading="lazy">
+            </a>
+          </div>
         </article>
 
       </div>
@@ -299,16 +327,18 @@
 <section class="contact" id="contact">
   <div class="wrap">
     <h2>Open to QA Automation and SDET roles</h2>
-    <p>The best way to reach me is on LinkedIn. My code is on GitHub.</p>
+    <p>Based in Chennai and available for immediate joining. Reach me at <a href="mailto:vikneshgs2002@gmail.com">vikneshgs2002@gmail.com</a> or on LinkedIn. My code is on GitHub.</p>
     <div class="actions">
-      <a class="btn btn-primary" href="https://www.linkedin.com/in/gs-viknesh">Message me on LinkedIn</a>
-      <a class="btn btn-ghost" href="https://github.com/vikneshgs23">See my GitHub</a>
+      <a class="btn btn-primary" href="mailto:vikneshgs2002@gmail.com">Email me</a>
+      <a class="btn btn-ghost" href="Viknesh_GS_Resume.pdf" download>Download resume</a>
+      <a class="btn btn-ghost" href="https://www.linkedin.com/in/gs-viknesh">LinkedIn</a>
+      <a class="btn btn-ghost" href="https://github.com/vikneshgs23">GitHub</a>
     </div>
   </div>
 </section>
 
 <footer>
-  <div class="wrap">Viknesh GS, Chennai, India</div>
+  <div class="wrap">Viknesh GS, Chennai, India &middot; <a href="mailto:vikneshgs2002@gmail.com">vikneshgs2002@gmail.com</a></div>
 </footer>
 
 </body>
