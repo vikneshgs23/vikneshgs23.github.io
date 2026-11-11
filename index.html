@@ -5,222 +5,122 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Viknesh GS | QA Automation / SDET</title>
 <meta name="description" content="Viknesh GS builds test automation frameworks with Java + Selenium and JavaScript + Playwright, and tests APIs with Postman and Newman. Based in Chennai, India. Available for immediate joining.">
+<meta name="author" content="Viknesh GS">
 <meta name="theme-color" content="#0d1320">
 <meta property="og:type" content="website">
+<meta property="og:site_name" content="Viknesh GS">
 <meta property="og:title" content="Viknesh GS | QA Automation / SDET">
 <meta property="og:description" content="Test automation in Java + Selenium and JavaScript + Playwright, plus API testing with Postman and Newman. Based in Chennai, India.">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Viknesh GS","jobTitle":"QA Automation Engineer / SDET","email":"vikneshgs2002@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Chennai","addressCountry":"IN"},"sameAs":["https://www.linkedin.com/in/gs-viknesh","https://github.com/vikneshgs23"]}</script>
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Viknesh GS","jobTitle":"QA Automation Engineer / SDET","email":"vikneshgs2002@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Chennai","addressCountry":"IN"},"knowsAbout":["Test automation","Selenium","Playwright","API testing","Postman","Java","JavaScript"],"sameAs":["https://www.linkedin.com/in/gs-viknesh","https://github.com/vikneshgs23"]}</script>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9C%85%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --bg: #f5f7fa;
-    --card: #ffffff;
-    --ink: #121826;
-    --muted: #596275;
-    --line: #dfe4ec;
-    --accent: #137a50;
-    --accent-soft: #e3f4ec;
-    --chip: #eef1f6;
-    --hero: #0d1320;
-    --hero-ink: #edf1f7;
-    --hero-muted: #98a3b8;
-    --hero-line: #232d40;
-    --pass: #3ddc97;
-    --fail: #ff8a7a;
-    --shadow: 0 1px 2px rgba(13, 19, 32, 0.05), 0 8px 24px -12px rgba(13, 19, 32, 0.12);
-    color-scheme: light;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #0a0e16;
-      --card: #111723;
-      --ink: #e8ecf3;
-      --muted: #9aa5ba;
-      --line: #222b3b;
-      --accent: #3ddc97;
-      --accent-soft: #12281f;
-      --chip: #182030;
-      --hero: #0d1320;
-      --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 24px -12px rgba(0, 0, 0, 0.5);
-      color-scheme: dark;
-    }
-  }
+:root{--bg:#f5f7fa;--card:#fff;--ink:#121826;--muted:#596275;--line:#dfe4ec;--accent:#137a50;--chip:#eef1f6;--hero:#0d1320;--hero-ink:#edf1f7;--hero-muted:#98a3b8;--hero-line:#232d40;--pass:#3ddc97;--fail:#ff8a7a;--shadow:0 1px 2px rgba(13,19,32,.05),0 8px 24px -12px rgba(13,19,32,.12);color-scheme:light}
+@media(prefers-color-scheme:dark){:root{--bg:#0a0e16;--card:#111723;--ink:#e8ecf3;--muted:#9aa5ba;--line:#222b3b;--accent:#3ddc97;--chip:#182030;--shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px -12px rgba(0,0,0,.5);color-scheme:dark}}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:4.5rem;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:1.0625rem/1.65 "IBM Plex Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:inherit}
+a:focus-visible{outline:2px solid var(--pass);outline-offset:3px;border-radius:4px}
+main a:focus-visible{outline-color:var(--accent)}
+.project-wide a:focus-visible{outline-color:var(--pass)}
+.skip{position:absolute;left:-9999px;top:.75rem}
+.skip:focus{left:.75rem;z-index:20;background:var(--pass);color:#07110c;padding:.5rem .9rem;border-radius:6px;font-weight:500}
+p{margin:0 0 1rem}
+h1,h2,h3{margin:0;letter-spacing:-.02em}
+.wrap{max-width:68rem;margin:0 auto;padding:0 1.5rem}
 
-  *, *::before, *::after { box-sizing: border-box; }
-  html { scroll-behavior: smooth; scroll-padding-top: 4.5rem; -webkit-text-size-adjust: 100%; }
-  body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--ink);
-    font-family: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-    font-size: 1.0625rem;
-    line-height: 1.65;
-  }
-  a { color: inherit; }
-  a:focus-visible, .btn:focus-visible { outline: 2px solid var(--pass); outline-offset: 3px; border-radius: 4px; }
-  main a:focus-visible { outline-color: var(--accent); }
-  .project-wide a:focus-visible { outline-color: var(--pass); }
-  .skip { position: absolute; left: -9999px; top: 0.75rem; }
-  .skip:focus { left: 0.75rem; z-index: 20; background: var(--pass); color: #07110c; padding: 0.5rem 0.9rem; border-radius: 6px; font-weight: 500; }
-  p { margin: 0 0 1rem; }
-  h1, h2, h3 { margin: 0; letter-spacing: -0.02em; }
+/* Navigation */
+.nav{position:sticky;top:0;z-index:10;background:rgba(13,19,32,.92);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border-bottom:1px solid var(--hero-line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:3.5rem}
+.nav .brand{color:var(--hero-ink);font-weight:600;text-decoration:none}
+.nav ul{display:flex;gap:1.75rem;list-style:none;margin:0;padding:0}
+.nav ul a{color:var(--hero-muted);text-decoration:none;font-size:.95rem;padding:.25rem 0;border-bottom:2px solid transparent;transition:color .15s,border-color .15s}
+.nav ul a:hover{color:var(--hero-ink);border-color:var(--pass)}
 
-  .wrap { max-width: 68rem; margin: 0 auto; padding: 0 1.5rem; }
+/* Hero */
+.hero{position:relative;overflow:hidden;color:var(--hero-ink);padding:5.5rem 0 6rem;background:radial-gradient(38rem 24rem at 88% 25%,rgba(61,220,151,.13),transparent 70%),var(--hero)}
+.hero::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.35;background-image:linear-gradient(var(--hero-line) 1px,transparent 1px),linear-gradient(90deg,var(--hero-line) 1px,transparent 1px);background-size:3.5rem 3.5rem;-webkit-mask-image:linear-gradient(to bottom,#000,transparent 85%);mask-image:linear-gradient(to bottom,#000,transparent 85%)}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.15fr .85fr;gap:3.5rem;align-items:center}
+.hero h1{font-size:clamp(2.5rem,6vw,4rem);line-height:1.05;font-weight:700;margin-bottom:1.25rem;text-wrap:balance}
+.hero .role{color:var(--pass);font-weight:500;margin-bottom:1rem;font-size:1.125rem}
+.hero .intro{color:var(--hero-muted);font-size:1.15rem;max-width:32rem;margin-bottom:1.25rem}
+.availability{display:inline-flex;align-items:center;gap:.6rem;border:1px solid var(--hero-line);border-radius:999px;padding:.3rem .9rem;margin-bottom:1.75rem;color:var(--hero-ink);font-size:.95rem;background:rgba(13,19,32,.6)}
+.availability::before{content:"";width:.55rem;height:.55rem;border-radius:50%;background:var(--pass);flex:none;box-shadow:0 0 0 4px rgba(61,220,151,.18)}
+.actions{display:flex;flex-wrap:wrap;gap:.75rem}
+.btn{display:inline-block;padding:.7rem 1.25rem;border-radius:6px;font-weight:500;font-size:1rem;text-decoration:none;transition:background-color .15s,border-color .15s}
+.btn-primary{background:var(--pass);color:#07110c}
+.btn-primary:hover{background:#63e8b0}
+.btn-ghost{border:1px solid var(--hero-line);color:var(--hero-ink)}
+.btn-ghost:hover{border-color:var(--hero-muted)}
 
-  /* Navigation */
-  .nav {
-    position: sticky; top: 0; z-index: 10;
-    background: rgba(13, 19, 32, 0.92);
-    -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
-    border-bottom: 1px solid var(--hero-line);
-  }
-  .nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 3.5rem; }
-  .nav .brand { color: var(--hero-ink); font-weight: 600; text-decoration: none; }
-  .nav ul { display: flex; gap: 1.75rem; list-style: none; margin: 0; padding: 0; }
-  .nav ul a { color: var(--hero-muted); text-decoration: none; font-size: 0.95rem; padding: 0.25rem 0; border-bottom: 2px solid transparent; transition: color 0.15s, border-color 0.15s; }
-  .nav ul a:hover { color: var(--hero-ink); border-color: var(--pass); }
+/* Test run panel */
+.run{background:#090d16;border:1px solid var(--hero-line);border-radius:10px;font:.92rem/1.5 "IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;overflow:hidden;box-shadow:0 24px 48px -24px rgba(0,0,0,.7)}
+.run-head{padding:.75rem 1.1rem;border-bottom:1px solid var(--hero-line);color:var(--hero-muted)}
+.run-head::before{content:"";display:inline-block;width:.55rem;height:.55rem;border-radius:50%;background:#3a4459;box-shadow:1rem 0 #3a4459,2rem 0 #3a4459;margin-right:3.2rem;vertical-align:middle}
+.run ul{list-style:none;margin:0;padding:1rem 1.1rem 1.2rem}
+.run li{display:flex;gap:.8rem;padding:.3rem 0;color:var(--hero-ink);animation:appear .4s ease both}
+.run li::before{content:"\2713";color:var(--pass);flex:none}
+.run li:nth-child(1){animation-delay:.3s}.run li:nth-child(2){animation-delay:.8s}.run li:nth-child(3){animation-delay:1.3s}
+.run li:nth-child(4){animation-delay:1.8s}.run li:nth-child(5){animation-delay:2.3s}.run li:nth-child(6){animation-delay:2.8s}
+@keyframes appear{from{opacity:0}to{opacity:1}}
 
-  /* Hero */
-  .hero {
-    position: relative; overflow: hidden; color: var(--hero-ink); padding: 5.5rem 0 6rem;
-    background: radial-gradient(38rem 24rem at 88% 25%, rgba(61, 220, 151, 0.13), transparent 70%), var(--hero);
-  }
-  .hero::before {
-    content: ""; position: absolute; inset: 0; pointer-events: none; opacity: 0.35;
-    background-image: linear-gradient(var(--hero-line) 1px, transparent 1px), linear-gradient(90deg, var(--hero-line) 1px, transparent 1px);
-    background-size: 3.5rem 3.5rem;
-    -webkit-mask-image: linear-gradient(to bottom, #000, transparent 85%);
-    mask-image: linear-gradient(to bottom, #000, transparent 85%);
-  }
-  .hero .wrap { position: relative; display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 3.5rem; align-items: center; }
-  .hero h1 { font-size: clamp(2.5rem, 6vw, 4rem); line-height: 1.05; font-weight: 700; margin-bottom: 1.25rem; text-wrap: balance; }
-  .hero .role { color: var(--pass); font-weight: 500; margin-bottom: 1rem; font-size: 1.125rem; }
-  .hero .intro { color: var(--hero-muted); font-size: 1.15rem; max-width: 32rem; margin-bottom: 1.25rem; }
-  .availability {
-    display: inline-flex; align-items: center; gap: 0.6rem;
-    border: 1px solid var(--hero-line); border-radius: 999px;
-    padding: 0.3rem 0.9rem; margin-bottom: 1.75rem;
-    color: var(--hero-ink); font-size: 0.95rem; background: rgba(13, 19, 32, 0.6);
-  }
-  .availability::before {
-    content: ""; width: 0.55rem; height: 0.55rem; border-radius: 50%;
-    background: var(--pass); flex: none; box-shadow: 0 0 0 4px rgba(61, 220, 151, 0.18);
-  }
-  .actions { display: flex; flex-wrap: wrap; gap: 0.75rem; }
-  .btn {
-    display: inline-block; padding: 0.7rem 1.25rem; border-radius: 6px;
-    font-weight: 500; font-size: 1rem; text-decoration: none;
-    transition: background-color 0.15s, border-color 0.15s, color 0.15s;
-  }
-  .btn-primary { background: var(--pass); color: #07110c; }
-  .btn-primary:hover { background: #63e8b0; }
-  .btn-ghost { border: 1px solid var(--hero-line); color: var(--hero-ink); }
-  .btn-ghost:hover { border-color: var(--hero-muted); }
+/* Sections */
+section{padding:5rem 0 0}
+.section-head{margin-bottom:2rem}
+.section-head h2{font-size:1.85rem;font-weight:700}
+.section-head h2::after{content:"";display:block;width:2.5rem;height:3px;background:var(--accent);border-radius:2px;margin-top:.6rem}
+.section-head p{color:var(--muted);margin:.9rem 0 0;max-width:36rem}
+.about{display:grid;grid-template-columns:1.2fr .8fr;gap:3rem}
+.facts{display:grid;gap:.9rem;align-content:start}
+.fact{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:8px;padding:.9rem 1.1rem;box-shadow:var(--shadow)}
+.fact strong{display:block;font-weight:600}
+.fact span{color:var(--muted);font-size:.95rem}
 
-  /* Test run panel: the one animated moment */
-  .run {
-    background: #090d16; border: 1px solid var(--hero-line); border-radius: 10px;
-    font-family: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
-    font-size: 0.92rem; line-height: 1.5; overflow: hidden;
-    box-shadow: 0 24px 48px -24px rgba(0, 0, 0, 0.7);
-  }
-  .run-head { padding: 0.75rem 1.1rem; border-bottom: 1px solid var(--hero-line); color: var(--hero-muted); }
-  .run-head::before {
-    content: ""; display: inline-block; width: 0.55rem; height: 0.55rem; border-radius: 50%;
-    background: #3a4459; box-shadow: 1rem 0 #3a4459, 2rem 0 #3a4459; margin-right: 3.2rem; vertical-align: middle;
-  }
-  .run ul { list-style: none; margin: 0; padding: 1rem 1.1rem 1.2rem; }
-  .run li { display: flex; gap: 0.8rem; padding: 0.3rem 0; color: var(--hero-ink); animation: appear 0.4s ease both; }
-  .run li::before { content: "\2713"; color: var(--pass); flex: none; }
-  .run li:nth-child(1) { animation-delay: 0.3s; }
-  .run li:nth-child(2) { animation-delay: 0.8s; }
-  .run li:nth-child(3) { animation-delay: 1.3s; }
-  .run li:nth-child(4) { animation-delay: 1.8s; }
-  .run li:nth-child(5) { animation-delay: 2.3s; }
-  .run li:nth-child(6) { animation-delay: 2.8s; }
-  @keyframes appear { from { opacity: 0; } to { opacity: 1; } }
+/* Projects */
+.projects{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+.project{background:var(--card);border:1px solid var(--line);border-top:3px solid var(--accent);border-radius:12px;padding:1.75rem;display:flex;flex-direction:column;box-shadow:var(--shadow);transition:border-color .15s}
+.project:hover{border-color:var(--accent)}
+.project h3{font-size:1.3rem;font-weight:600;margin-bottom:.25rem}
+.project .sub{color:var(--muted);margin-bottom:1rem;font-size:.95rem}
+.project ul{margin:0 0 1.25rem;padding-left:1.1rem}
+.project li{margin-bottom:.35rem}
+.project .chips{margin-top:auto;padding-bottom:1.25rem}
+.links{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1.25rem}
+.repo{font-weight:500;color:var(--accent);text-underline-offset:.2em}
+.ci-badge{display:inline-flex;line-height:0}
+.ci-badge img{height:20px;width:auto}
+.project-wide{grid-column:1/-1;background:var(--hero);color:var(--hero-ink);border-color:var(--hero-line);border-top-color:var(--pass)}
+.project-wide:hover{border-color:var(--pass)}
+.project-wide .sub,.project-wide .next{color:var(--hero-muted)}
+.project-wide .next{font-size:.95rem;margin:0 0 1.25rem}
+.project-wide .chip{background:#182030;color:var(--hero-ink)}
+.project-wide .repo{color:var(--pass)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--hero-line);border:1px solid var(--hero-line);border-radius:8px;overflow:hidden;margin-bottom:1.5rem}
+.stat{background:#090d16;padding:1rem 1.1rem}
+.stat strong{display:block;font:500 1.9rem/1.2 "IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;color:var(--pass)}
+.stat.bad strong{color:var(--fail)}
+.stat span{color:var(--hero-muted);font-size:.9rem}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem}
+.chip{background:var(--chip);border-radius:999px;padding:.2rem .8rem;font-size:.875rem}
 
-  /* Sections */
-  section { padding: 5rem 0 0; }
-  .section-head { margin-bottom: 2rem; }
-  .section-head h2 { font-size: 1.85rem; font-weight: 700; }
-  .section-head h2::after { content: ""; display: block; width: 2.5rem; height: 3px; background: var(--accent); border-radius: 2px; margin-top: 0.6rem; }
-  .section-head p { color: var(--muted); margin: 0.9rem 0 0; max-width: 36rem; }
+/* Skills, contact, footer */
+.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
+.group{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:1.4rem;box-shadow:var(--shadow)}
+.group h3{font-size:1.0625rem;font-weight:600;margin-bottom:.9rem}
+.contact{background:var(--hero);color:var(--hero-ink);margin-top:5rem;padding:4.5rem 0}
+.contact h2{font-size:2rem;font-weight:700;max-width:30rem;margin-bottom:.75rem}
+.contact p{color:var(--hero-muted);max-width:30rem;margin-bottom:1.75rem}
+.contact p a{color:var(--hero-ink);text-underline-offset:.2em}
+footer{background:var(--hero);color:var(--hero-muted);border-top:1px solid var(--hero-line);padding:1.25rem 0;font-size:.9rem}
+footer a{text-underline-offset:.2em}
 
-  /* About */
-  .about { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 3rem; }
-  .facts { display: grid; gap: 0.9rem; align-content: start; }
-  .fact { background: var(--card); border: 1px solid var(--line); border-left: 3px solid var(--accent); border-radius: 8px; padding: 0.9rem 1.1rem; box-shadow: var(--shadow); }
-  .fact strong { display: block; font-weight: 600; }
-  .fact span { color: var(--muted); font-size: 0.95rem; }
-
-  /* Projects */
-  .projects { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
-  .project {
-    background: var(--card); border: 1px solid var(--line); border-top: 3px solid var(--accent); border-radius: 12px;
-    padding: 1.75rem; display: flex; flex-direction: column; box-shadow: var(--shadow);
-    transition: border-color 0.15s;
-  }
-  .project:hover { border-color: var(--accent); }
-  .project h3 { font-size: 1.3rem; font-weight: 600; margin-bottom: 0.25rem; }
-  .project .sub { color: var(--muted); margin-bottom: 1rem; font-size: 0.95rem; }
-  .project ul { margin: 0 0 1.25rem; padding-left: 1.1rem; }
-  .project li { margin-bottom: 0.35rem; }
-  .project .chips { margin-top: auto; padding-bottom: 1.25rem; }
-  .links { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 1.25rem; }
-  .repo { font-weight: 500; color: var(--accent); text-underline-offset: 0.2em; }
-  .ci-badge { display: inline-flex; line-height: 0; }
-  .ci-badge img { height: 20px; width: auto; }
-
-  /* API project: a Newman-style result panel, the standout card */
-  .project-wide { grid-column: 1 / -1; background: var(--hero); color: var(--hero-ink); border-color: var(--hero-line); border-top-color: var(--pass); }
-  .project-wide:hover { border-color: var(--pass); }
-  .project-wide .sub { color: var(--hero-muted); }
-  .project-wide .chip { background: #182030; color: var(--hero-ink); }
-  .project-wide .repo { color: var(--pass); }
-  .project-wide .next { color: var(--hero-muted); font-size: 0.95rem; margin: 0 0 1.25rem; }
-  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--hero-line); border: 1px solid var(--hero-line); border-radius: 8px; overflow: hidden; margin-bottom: 1.5rem; }
-  .stat { background: #090d16; padding: 1rem 1.1rem; }
-  .stat strong { display: block; font-family: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace; font-weight: 500; font-size: 1.9rem; line-height: 1.2; color: var(--pass); }
-  .stat.bad strong { color: var(--fail); }
-  .stat span { color: var(--hero-muted); font-size: 0.9rem; }
-
-  .chips { display: flex; flex-wrap: wrap; gap: 0.5rem; }
-  .chip { background: var(--chip); border-radius: 999px; padding: 0.2rem 0.8rem; font-size: 0.875rem; }
-
-  /* Skills */
-  .skills { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
-  .group { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 1.4rem; box-shadow: var(--shadow); }
-  .group h3 { font-size: 1.0625rem; font-weight: 600; margin-bottom: 0.9rem; }
-
-  /* Contact */
-  .contact { background: var(--hero); color: var(--hero-ink); margin-top: 5rem; padding: 4.5rem 0; }
-  .contact h2 { font-size: 2rem; font-weight: 700; max-width: 30rem; margin-bottom: 0.75rem; }
-  .contact p { color: var(--hero-muted); max-width: 30rem; margin-bottom: 1.75rem; }
-  .contact p a { color: var(--hero-ink); text-underline-offset: 0.2em; }
-  footer { background: var(--hero); color: var(--hero-muted); border-top: 1px solid var(--hero-line); padding: 1.25rem 0; font-size: 0.9rem; }
-  footer a { text-underline-offset: 0.2em; }
-
-  @media (max-width: 52rem) {
-    .hero { padding: 3.5rem 0 4rem; }
-    .hero .wrap, .about, .projects { grid-template-columns: 1fr; }
-    .hero .wrap { gap: 2.5rem; }
-    .skills { grid-template-columns: 1fr; }
-    .stats { grid-template-columns: repeat(2, 1fr); }
-    section { padding-top: 3.5rem; }
-  }
-  @media (max-width: 34rem) {
-    .nav ul { gap: 1rem; }
-    .nav ul li:first-child { display: none; }
-  }
-  @media (prefers-reduced-motion: reduce) {
-    html { scroll-behavior: auto; }
-    .run li { animation: none; }
-    .btn, .project, .nav ul a { transition: none; }
-  }
+@media(max-width:52rem){.hero{padding:3.5rem 0 4rem}.hero .wrap,.about,.projects{grid-template-columns:1fr}.hero .wrap{gap:2.5rem}.skills{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}section{padding-top:3.5rem}}
+@media(max-width:34rem){.nav ul{gap:1rem}.nav ul li:first-child{display:none}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.run li{animation:none}.btn,.project,.nav ul a{transition:none}}
 </style>
 </head>
 <body>
@@ -244,12 +144,12 @@
     <div>
       <p class="role">QA Automation Engineer / SDET</p>
       <h1>I build test automation that catches bugs before users do.</h1>
-      <p class="intro">Test frameworks in Java + Selenium and JavaScript + Playwright, run in CI on every push. Based in Chennai, India.</p>
+      <p class="intro">Test frameworks in Java + Selenium and JavaScript + Playwright, run in CI on every push, plus API testing with Postman. Based in Chennai, India.</p>
       <p class="availability">Available for immediate joining</p>
       <div class="actions">
         <a class="btn btn-primary" href="#projects">View projects</a>
-        <a class="btn btn-ghost" href="Viknesh_GS_Resume.pdf" download>Download resume</a>
-        <a class="btn btn-ghost" href="https://www.linkedin.com/in/gs-viknesh">LinkedIn</a>
+        <a class="btn btn-ghost" href="Viknesh_GS-QA%20CV.pdf" download="Viknesh_GS_Resume.pdf">Download resume</a>
+        <a class="btn btn-ghost" href="https://www.linkedin.com/in/gs-viknesh" target="_blank" rel="noopener noreferrer">LinkedIn</a>
       </div>
     </div>
 
@@ -274,12 +174,13 @@
       <div class="section-head"><h2>About</h2></div>
       <div class="about">
         <div>
-          <p>I started in manual testing, covering UI and end-to-end testing on small projects at an early-stage startup. I then moved into automation and built two frameworks to practice what I learned, one in Java and one in JavaScript.</p>
+          <p>I started in manual testing on web and mobile projects at an early-stage startup. After automation training at QSpiders, I built two frameworks to practice what I learned, one in Java and one in JavaScript, and then an API testing project with Postman and Newman.</p>
           <p>I care about tests that are easy to read, easy to maintain, and fast enough to run on every change. I’m looking for a QA Automation or SDET role where I can keep growing that skill.</p>
         </div>
         <div class="facts">
-          <div class="fact"><strong>Manual testing background</strong><span>UI and end-to-end testing</span></div>
-          <div class="fact"><strong>ISTQB CTFL certified</strong><span>Foundation Level, <a class="repo" href="https://drive.google.com/file/d/1ECh4nv7LeVLXmuitn7aEr0BI2p7vVKG-/view?usp=drive_link">view certificate</a></span></div>
+          <div class="fact"><strong>ISTQB CTFL certified</strong><span>Foundation Level, <a class="repo" href="https://drive.google.com/file/d/1ECh4nv7LeVLXmuitn7aEr0BI2p7vVKG-/view?usp=drive_link" target="_blank" rel="noopener noreferrer">view certificate</a></span></div>
+          <div class="fact"><strong>Manual testing background</strong><span>Emblock Tech, 3-4 web and mobile projects</span></div>
+          <div class="fact"><strong>Automation training</strong><span>QSpiders, certificate awarded</span></div>
           <div class="fact"><strong>API testing with Postman and Newman</strong><span>34 test cases, 2 real defects documented</span></div>
           <div class="fact"><strong>Chennai, India</strong><span>Available for immediate joining</span></div>
         </div>
@@ -299,17 +200,18 @@
           <h3>Selenium + TestNG framework</h3>
           <p class="sub">SauceDemo (Swag Labs), Java</p>
           <ul>
-            <li>Page Object Model with reusable wait and screenshot utilities</li>
-            <li>Config-driven setup and ExtentReports</li>
-            <li>Headless runs on GitHub Actions</li>
+            <li>Page Object Model across base, pages, tests and utils layers, with reusable wait and screenshot utilities</li>
+            <li>Config-driven setup, ExtentReports and a TestNG listener</li>
+            <li>Login, negative and end-to-end scenarios through a testng.xml suite</li>
+            <li>Headless runs on GitHub Actions, with a live last-run report in the README</li>
           </ul>
           <div class="chips">
             <span class="chip">Java 17</span><span class="chip">Selenium 4</span><span class="chip">TestNG</span><span class="chip">Maven</span>
           </div>
           <div class="links">
-            <a class="repo" href="https://github.com/vikneshgs23/saucedemo-selenium-testng-framework">View on GitHub</a>
-            <a class="ci-badge" href="https://github.com/vikneshgs23/saucedemo-selenium-testng-framework/actions/workflows/regression.yml" aria-label="Selenium project CI runs on GitHub Actions">
-              <img src="https://github.com/vikneshgs23/saucedemo-selenium-testng-framework/actions/workflows/regression.yml/badge.svg" alt="Selenium project CI status" loading="lazy">
+            <a class="repo" href="https://github.com/vikneshgs23/saucedemo-selenium-testng-framework" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+            <a class="ci-badge" href="https://github.com/vikneshgs23/saucedemo-selenium-testng-framework/actions/workflows/regression.yml" target="_blank" rel="noopener noreferrer" aria-label="Selenium project CI runs on GitHub Actions">
+              <img src="https://github.com/vikneshgs23/saucedemo-selenium-testng-framework/actions/workflows/regression.yml/badge.svg" alt="Selenium project CI status" height="20" loading="lazy">
             </a>
           </div>
         </article>
@@ -318,17 +220,18 @@
           <h3>Playwright test suite</h3>
           <p class="sub">Swag Labs, JavaScript</p>
           <ul>
-            <li>Page Object Model with JSON test data</li>
-            <li>Parallel runs on Chromium, Firefox and WebKit</li>
-            <li>Traces and screenshots on failure, CI on every push and pull request</li>
+            <li>Page Object Model (Login, Inventory, Cart, Checkout) with JSON test data and reusable helpers</li>
+            <li>Login, negative and end-to-end cases, run in parallel on Chromium, Firefox and WebKit</li>
+            <li>Full-page screenshots and traces on failure and retry</li>
+            <li>CI on every push and pull request, with the HTML report published and a live last-run report in the README</li>
           </ul>
           <div class="chips">
             <span class="chip">JavaScript</span><span class="chip">Playwright</span><span class="chip">GitHub Actions</span>
           </div>
           <div class="links">
-            <a class="repo" href="https://github.com/vikneshgs23/playwright-swaglabs-js">View on GitHub</a>
-            <a class="ci-badge" href="https://github.com/vikneshgs23/playwright-swaglabs-js/actions/workflows/playwright.yml" aria-label="Playwright project CI runs on GitHub Actions">
-              <img src="https://github.com/vikneshgs23/playwright-swaglabs-js/actions/workflows/playwright.yml/badge.svg" alt="Playwright project CI status" loading="lazy">
+            <a class="repo" href="https://github.com/vikneshgs23/playwright-swaglabs-js" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+            <a class="ci-badge" href="https://github.com/vikneshgs23/playwright-swaglabs-js/actions/workflows/playwright.yml" target="_blank" rel="noopener noreferrer" aria-label="Playwright project CI runs on GitHub Actions">
+              <img src="https://github.com/vikneshgs23/playwright-swaglabs-js/actions/workflows/playwright.yml/badge.svg" alt="Playwright project CI status" height="20" loading="lazy">
             </a>
           </div>
         </article>
@@ -345,16 +248,17 @@
           <ul>
             <li>Test cases written per endpoint: positive, negative, auth and end-to-end</li>
             <li>Scripted Postman assertions with token and booking ID chaining</li>
-            <li>Command-line runs with Newman and an HTML report</li>
+            <li>Collection and environment versioned in the repo; command-line runs with Newman</li>
+            <li>Newman HTML report published live on GitHub Pages</li>
             <li>Real defects found, such as a non-numeric price accepted and stored as null</li>
           </ul>
-          <p class="next">Next: a REST Assured framework in Java.</p>
+          <p class="next">In progress: a REST Assured + TestNG suite in the same repo. Setup and a smoke test are done; auth and booking tests are next.</p>
           <div class="chips">
-            <span class="chip">Postman</span><span class="chip">Newman</span><span class="chip">JavaScript</span>
+            <span class="chip">Postman</span><span class="chip">Newman</span><span class="chip">JavaScript</span><span class="chip">REST Assured</span><span class="chip">GitHub Pages</span>
           </div>
           <div class="links">
-            <a class="repo" href="https://github.com/vikneshgs23/api-automation-portfolio">View on GitHub</a>
-            <a class="repo" href="https://vikneshgs23.github.io/api-automation-portfolio/postman/reports/report.html">View Newman report</a>
+            <a class="repo" href="https://github.com/vikneshgs23/api-automation-portfolio" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+            <a class="repo" href="https://vikneshgs23.github.io/api-automation-portfolio/postman/reports/report.html" target="_blank" rel="noopener noreferrer">View Newman report</a>
           </div>
         </article>
 
@@ -366,30 +270,12 @@
     <div class="wrap">
       <div class="section-head"><h2>Skills</h2></div>
       <div class="skills">
-        <div class="group">
-          <h3>Languages</h3>
-          <div class="chips"><span class="chip">Java</span><span class="chip">JavaScript</span></div>
-        </div>
-        <div class="group">
-          <h3>Automation</h3>
-          <div class="chips"><span class="chip">Selenium WebDriver 4</span><span class="chip">Playwright</span><span class="chip">TestNG</span><span class="chip">Playwright Test</span></div>
-        </div>
-        <div class="group">
-          <h3>Build and CI</h3>
-          <div class="chips"><span class="chip">Maven</span><span class="chip">GitHub Actions</span><span class="chip">Git</span></div>
-        </div>
-        <div class="group">
-          <h3>API testing</h3>
-          <div class="chips"><span class="chip">Postman</span><span class="chip">Newman</span><span class="chip">API test design</span></div>
-        </div>
-        <div class="group">
-          <h3>Reporting</h3>
-          <div class="chips"><span class="chip">ExtentReports</span><span class="chip">Playwright HTML report</span><span class="chip">Newman HTML report</span></div>
-        </div>
-        <div class="group">
-          <h3>Practices</h3>
-          <div class="chips"><span class="chip">Page Object Model</span><span class="chip">Data-driven testing</span><span class="chip">Manual testing</span></div>
-        </div>
+        <div class="group"><h3>Languages</h3><div class="chips"><span class="chip">Java</span><span class="chip">JavaScript</span><span class="chip">SQL</span></div></div>
+        <div class="group"><h3>UI automation</h3><div class="chips"><span class="chip">Selenium WebDriver 4</span><span class="chip">Playwright</span><span class="chip">TestNG</span><span class="chip">Page Object Model</span></div></div>
+        <div class="group"><h3>API testing</h3><div class="chips"><span class="chip">Postman</span><span class="chip">Newman</span><span class="chip">REST Assured</span><span class="chip">API test design</span></div></div>
+        <div class="group"><h3>Build, CI and reporting</h3><div class="chips"><span class="chip">Maven</span><span class="chip">Git</span><span class="chip">GitHub Actions</span><span class="chip">GitHub Pages</span><span class="chip">ExtentReports</span><span class="chip">Playwright HTML report</span><span class="chip">Newman HTML report</span></div></div>
+        <div class="group"><h3>Manual testing</h3><div class="chips"><span class="chip">Functional</span><span class="chip">Regression</span><span class="chip">Smoke and sanity</span><span class="chip">Cross-browser</span><span class="chip">Test case design</span><span class="chip">Traceability matrix</span></div></div>
+        <div class="group"><h3>Process and tools</h3><div class="chips"><span class="chip">Jira</span><span class="chip">Agile</span><span class="chip">SDLC and STLC</span><span class="chip">Defect life cycle</span><span class="chip">Data-driven testing</span></div></div>
       </div>
     </div>
   </section>
@@ -402,9 +288,9 @@
     <p>Based in Chennai and available for immediate joining. Reach me at <a href="mailto:vikneshgs2002@gmail.com">vikneshgs2002@gmail.com</a> or on LinkedIn. My code is on GitHub.</p>
     <div class="actions">
       <a class="btn btn-primary" href="mailto:vikneshgs2002@gmail.com">Email me</a>
-      <a class="btn btn-ghost" href="Viknesh_GS_Resume.pdf" download>Download resume</a>
-      <a class="btn btn-ghost" href="https://www.linkedin.com/in/gs-viknesh">LinkedIn</a>
-      <a class="btn btn-ghost" href="https://github.com/vikneshgs23">GitHub</a>
+      <a class="btn btn-ghost" href="Viknesh_GS-QA%20CV.pdf" download="Viknesh_GS_Resume.pdf">Download resume</a>
+      <a class="btn btn-ghost" href="https://www.linkedin.com/in/gs-viknesh" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a class="btn btn-ghost" href="https://github.com/vikneshgs23" target="_blank" rel="noopener noreferrer">GitHub</a>
     </div>
   </div>
 </section>
