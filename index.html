@@ -104,8 +104,23 @@ section{padding:5rem 0 0}
 .stat strong{display:block;font:500 1.9rem/1.2 "IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;color:var(--pass)}
 .stat.bad strong{color:var(--fail)}
 .stat span{color:var(--hero-muted);font-size:.9rem}
+.defect{background:#090d16;border:1px solid var(--hero-line);border-left:3px solid var(--fail);border-radius:8px;padding:1rem 1.1rem;margin:0 0 1.25rem}
+.defect h4{margin:0 0 .6rem;font-size:1rem;font-weight:600}
+.defect dl{display:grid;grid-template-columns:6.5rem 1fr;gap:.35rem 1rem;margin:0;font-size:.95rem}
+.defect dt{color:var(--hero-muted)}
+.defect dd{margin:0}
+.defect code{font:.88rem "IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;color:var(--fail)}
 .chips{display:flex;flex-wrap:wrap;gap:.5rem}
 .chip{background:var(--chip);border-radius:999px;padding:.2rem .8rem;font-size:.875rem}
+
+/* Experience */
+.timeline{display:grid;gap:1rem}
+.tl{display:grid;grid-template-columns:11rem 1fr;gap:.5rem 1.5rem;background:var(--card);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:12px;padding:1.25rem 1.4rem;box-shadow:var(--shadow)}
+.tl time{color:var(--muted);font:.9rem "IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace}
+.tl h3{font-size:1.1rem;font-weight:600}
+.tl .org{color:var(--muted);font-size:.95rem;margin:.1rem 0 .5rem}
+.tl ul{margin:0;padding-left:1.1rem}
+.tl li{margin-bottom:.25rem}
 
 /* Skills, contact, footer */
 .skills{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
@@ -118,8 +133,8 @@ section{padding:5rem 0 0}
 footer{background:var(--hero);color:var(--hero-muted);border-top:1px solid var(--hero-line);padding:1.25rem 0;font-size:.9rem}
 footer a{text-underline-offset:.2em}
 
-@media(max-width:52rem){.hero{padding:3.5rem 0 4rem}.hero .wrap,.about,.projects{grid-template-columns:1fr}.hero .wrap{gap:2.5rem}.skills{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}section{padding-top:3.5rem}}
-@media(max-width:34rem){.nav ul{gap:1rem}.nav ul li:first-child{display:none}}
+@media(max-width:52rem){.hero{padding:3.5rem 0 4rem}.hero .wrap,.about,.projects{grid-template-columns:1fr}.hero .wrap{gap:2.5rem}.skills{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}.tl{grid-template-columns:1fr}section{padding-top:3.5rem}}
+@media(max-width:34rem){.nav ul{gap:1rem}.nav ul li:nth-child(1),.nav ul li:nth-child(3){display:none}.defect dl{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.run li{animation:none}.btn,.project,.nav ul a{transition:none}}
 </style>
 </head>
@@ -133,6 +148,7 @@ footer a{text-underline-offset:.2em}
     <ul>
       <li><a href="#about">About</a></li>
       <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -210,6 +226,7 @@ footer a{text-underline-offset:.2em}
           </div>
           <div class="links">
             <a class="repo" href="https://github.com/vikneshgs23/saucedemo-selenium-testng-framework" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+            <a class="repo" href="https://vikneshgs23.github.io/saucedemo-selenium-testng-framework/" target="_blank" rel="noopener noreferrer">View live report</a>
             <a class="ci-badge" href="https://github.com/vikneshgs23/saucedemo-selenium-testng-framework/actions/workflows/regression.yml" target="_blank" rel="noopener noreferrer" aria-label="Selenium project CI runs on GitHub Actions">
               <img src="https://github.com/vikneshgs23/saucedemo-selenium-testng-framework/actions/workflows/regression.yml/badge.svg" alt="Selenium project CI status" height="20" loading="lazy">
             </a>
@@ -230,6 +247,7 @@ footer a{text-underline-offset:.2em}
           </div>
           <div class="links">
             <a class="repo" href="https://github.com/vikneshgs23/playwright-swaglabs-js" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+            <a class="repo" href="https://vikneshgs23.github.io/playwright-swaglabs-js/" target="_blank" rel="noopener noreferrer">View live report</a>
             <a class="ci-badge" href="https://github.com/vikneshgs23/playwright-swaglabs-js/actions/workflows/playwright.yml" target="_blank" rel="noopener noreferrer" aria-label="Playwright project CI runs on GitHub Actions">
               <img src="https://github.com/vikneshgs23/playwright-swaglabs-js/actions/workflows/playwright.yml/badge.svg" alt="Playwright project CI status" height="20" loading="lazy">
             </a>
@@ -245,6 +263,7 @@ footer a{text-underline-offset:.2em}
             <div class="stat"><strong>87</strong><span>assertions across 41 requests</span></div>
             <div class="stat bad"><strong>2</strong><span>API defects documented</span></div>
           </div>
+          <p class="next">The 2 failures in the Newman run are the 2 defects below: the API accepts input it should reject. The suite is reporting real bugs, not a broken setup.</p>
           <ul>
             <li>Test cases written per endpoint: positive, negative, auth and end-to-end</li>
             <li>Scripted Postman assertions with token and booking ID chaining</li>
@@ -253,6 +272,15 @@ footer a{text-underline-offset:.2em}
             <li>32 test cases automated in Java with REST Assured and TestNG: ping, auth, create booking, get booking and get booking IDs</li>
             <li>Real defects found and documented as tests, such as checkout before check-in accepted and a non-numeric price stored as null</li>
           </ul>
+          <div class="defect">
+            <h4>Defect spotlight: invalid price accepted</h4>
+            <dl>
+              <dt>Request</dt><dd><code>POST /booking</code> with a non-numeric <code>totalprice</code></dd>
+              <dt>Expected</dt><dd>The request is rejected with a validation error</dd>
+              <dt>Actual</dt><dd>The booking is created and <code>totalprice</code> is stored as null</dd>
+              <dt>Also found</dt><dd>A booking with checkout before check-in is accepted</dd>
+            </dl>
+          </div>
           <div class="chips">
             <span class="chip">Postman</span><span class="chip">Newman</span><span class="chip">JavaScript</span><span class="chip">REST Assured</span><span class="chip">Java</span><span class="chip">TestNG</span><span class="chip">GitHub Pages</span>
           </div>
@@ -262,6 +290,50 @@ footer a{text-underline-offset:.2em}
           </div>
         </article>
 
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="wrap">
+      <div class="section-head"><h2>Experience and training</h2></div>
+      <div class="timeline">
+        <article class="tl">
+          <time>Sep 2024 - Nov 2025</time>
+          <div>
+            <h3>Automation Testing Training</h3>
+            <p class="org">QSpiders, certificate awarded</p>
+            <ul>
+              <li>Trained in Java, Selenium WebDriver and TestNG</li>
+              <li>Built a 15-test-case Selenium + TestNG framework for Trello covering functional and regression scenarios</li>
+            </ul>
+          </div>
+        </article>
+        <article class="tl">
+          <time>Aug 2023 - Jul 2024</time>
+          <div>
+            <h3>Manual Software Tester</h3>
+            <p class="org">Emblock Tech (early-stage startup), Chennai</p>
+            <ul>
+              <li>Tested 3-4 web and mobile projects end to end: UI, functional, regression, integration and cross-browser</li>
+              <li>Wrote test cases and traceability matrices; logged, retested and closed defects in Jira with developers</li>
+            </ul>
+          </div>
+        </article>
+        <article class="tl">
+          <time>29 Sep 2026</time>
+          <div>
+            <h3>ISTQB Certified Tester, Foundation Level (CTFL)</h3>
+            <p class="org">Indian Testing Board, <a class="repo" href="https://drive.google.com/file/d/1ECh4nv7LeVLXmuitn7aEr0BI2p7vVKG-/view?usp=drive_link" target="_blank" rel="noopener noreferrer">view certificate</a></p>
+          </div>
+        </article>
+        <article class="tl">
+          <time>2023</time>
+          <div>
+            <h3>B.E. Electrical and Electronics Engineering</h3>
+            <p class="org">St. Joseph's College of Engineering, Chennai</p>
+          </div>
+        </article>
       </div>
     </div>
   </section>
