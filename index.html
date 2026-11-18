@@ -99,6 +99,7 @@ section{padding:5rem 0 0}
 .project-wide .next{font-size:.95rem;margin:0 0 1.25rem}
 .project-wide .chip{background:#182030;color:var(--hero-ink)}
 .project-wide .repo{color:var(--pass)}
+.project-full{grid-column:1/-1}
 .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--hero-line);border:1px solid var(--hero-line);border-radius:8px;overflow:hidden;margin-bottom:1.5rem}
 .stat{background:#090d16;padding:1rem 1.1rem}
 .stat strong{display:block;font:500 1.9rem/1.2 "IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;color:var(--pass)}
@@ -190,7 +191,7 @@ footer a{text-underline-offset:.2em}
       <div class="section-head"><h2>About</h2></div>
       <div class="about">
         <div>
-          <p>I started in manual testing on web and mobile projects at an early-stage startup. After automation training at QSpiders, I built two frameworks to practice what I learned, one in Java and one in JavaScript, and then an API testing project with Postman, Newman and REST Assured.</p>
+          <p>I started in manual testing on web and mobile projects at an early-stage startup. After automation training at QSpiders, I built two frameworks to practice what I learned, one in Java and one in JavaScript, and then two API testing projects: one with Postman, Newman and REST Assured on Restful-Booker, and one with REST Assured and GitHub Actions on Trello.</p>
           <p>I care about tests that are easy to read, easy to maintain, and fast enough to run on every change. I’m looking for a QA Automation or SDET role where I can keep growing that skill.</p>
         </div>
         <div class="facts">
@@ -208,7 +209,7 @@ footer a{text-underline-offset:.2em}
     <div class="wrap">
       <div class="section-head">
         <h2>Projects</h2>
-        <p>The same application, automated in two stacks, so you can compare how I structure tests in each. A third project covers API testing.</p>
+        <p>The same application, automated in two stacks, so you can compare how I structure tests in each. Two more projects cover API testing.</p>
       </div>
       <div class="projects">
 
@@ -261,7 +262,6 @@ footer a{text-underline-offset:.2em}
             <div class="stat"><strong>34</strong><span>test cases designed</span></div>
             <div class="stat"><strong>34</strong><span>automated with REST Assured</span></div>
             <div class="stat"><strong>87</strong><span>assertions across 41 requests</span></div>
-             <div class="stat"><strong>POJO Classes Implemented</strong></div>
             <div class="stat bad"><strong>2</strong><span>API defects documented</span></div>
           </div>
           <p class="next">The 2 failures in the Newman run are the 2 defects below: the API accepts input it should reject. The suite is reporting real bugs, not a broken setup.</p>
@@ -271,6 +271,7 @@ footer a{text-underline-offset:.2em}
             <li>Collection and environment versioned in the repo; command-line runs with Newman</li>
             <li>Newman HTML report published live on GitHub Pages</li>
             <li>32 test cases automated in Java with REST Assured and TestNG: ping, auth, create booking, get booking and get booking IDs</li>
+            <li>POJO classes model the request and response payloads</li>
             <li>Real defects found and documented as tests, such as checkout before check-in accepted and a non-numeric price stored as null</li>
           </ul>
           <div class="defect">
@@ -291,6 +292,28 @@ footer a{text-underline-offset:.2em}
           </div>
         </article>
 
+        <article class="project project-full">
+          <h3>Trello API test automation</h3>
+          <p class="sub">Trello REST API, Java, REST Assured and TestNG</p>
+          <ul>
+            <li>Automated the 10 Trello workflow test cases at API level (board, lists, cards, move card, due date, label, invite, archive, comment, delete), plus negative tests for authentication and validation: 15 tests in total</li>
+            <li>Started as a Selenium UI project; Trello's email OTP blocked automated login, so the same test cases moved to the API layer</li>
+            <li>Runs daily on GitHub Actions in about 50 seconds, with the report on GitHub Pages and the API key and token kept in encrypted repository secrets</li>
+            <li>Each run creates its own board and deletes it afterwards, even when a test fails; transient 502, 503 and 504 errors are retried without hiding real failures</li>
+            <li>Real API behaviour documented from the live service, such as a missing token returning 400 instead of 401 and a repeat invite returning 403</li>
+          </ul>
+          <div class="chips">
+            <span class="chip">Java</span><span class="chip">REST Assured</span><span class="chip">TestNG</span><span class="chip">Maven</span><span class="chip">GitHub Actions</span><span class="chip">GitHub Pages</span>
+          </div>
+          <div class="links">
+            <a class="repo" href="https://github.com/vikneshgs23/trello-api-automation" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+            <a class="repo" href="https://vikneshgs23.github.io/trello-api-automation/emailable-report.html" target="_blank" rel="noopener noreferrer">View live report</a>
+            <a class="ci-badge" href="https://github.com/vikneshgs23/trello-api-automation/actions/workflows/api-tests.yml" target="_blank" rel="noopener noreferrer" aria-label="Trello API project CI runs on GitHub Actions">
+              <img src="https://github.com/vikneshgs23/trello-api-automation/actions/workflows/api-tests.yml/badge.svg" alt="Trello API project CI status" height="20" loading="lazy">
+            </a>
+          </div>
+        </article>
+
       </div>
     </div>
   </section>
@@ -306,7 +329,7 @@ footer a{text-underline-offset:.2em}
             <p class="org">QSpiders, certificate awarded</p>
             <ul>
               <li>Trained in Java, Selenium WebDriver and TestNG</li>
-              <li>Built a 15-test-case Selenium + TestNG framework for Trello covering functional and regression scenarios</li>
+              <li>Designed 10 Trello test cases and automated 6 UI flows (login, board and list management) in a Selenium + TestNG framework using Page Object Model and Excel/properties-driven data</li>
             </ul>
           </div>
         </article>
